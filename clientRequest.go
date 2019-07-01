@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"crypto/tls"
+	"encoding/json"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -10,7 +11,7 @@ import (
 
 func clientRequest(
 	ctx context.Context, url, username, password string) (
-	result []byte) {
+	result RichiestaNefer) {
 
 	req, err := http.NewRequest("GET", url, nil)
 	if err != nil {
@@ -37,14 +38,12 @@ func clientRequest(
 		log.Printf(
 			"Error HTTP Client Do impossibile raggiungere: %s\n",
 			err.Error())
-		return nil
 	}
 
 	if res.StatusCode > 300 {
 		log.Printf(
 			"Error Ricevuto un errore http: %d\n",
 			res.StatusCode)
-		return nil
 	}
 
 	body, err := ioutil.ReadAll(res.Body)
@@ -57,15 +56,14 @@ func clientRequest(
 	defer res.Body.Close()
 	// fmt.Println(res)
 	// fmt.Println(string(body))
-	result := new(RichiestaNefer)
-	err = json.Unmarshal(body, &result)
+	var dati RichiestaNefer
+	err = json.Unmarshal(body, &dati)
 	if err != nil {
 		log.Printf(
-			"Error unmarshal impossibile per %s, %s\n",
-			intf,
+			"Error unmarshal impossibile per %s\n",
 			err.Error())
 	}
 
-	return result
+	return dati
 
 }

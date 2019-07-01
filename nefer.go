@@ -53,7 +53,19 @@ func nefer(ctx context.Context, device, intf string) {
 			// Elabora il risulatato della richiesta web.
 			//elaboroRequest(ctx, result, device)
 
-			fmt.Println(string(result))
+			fmt.Println("VolumeIN: ", result.NetVolumeIn.Device.Intf.Data)
+			in := result.NetVolumeIn.Device.Intf.Data
+			for n := range in {
+				fmt.Println(in[n].Time)
+				fmt.Println(in[n].Value)
+			}
+			fmt.Println("VolumeOUT: ", result.NetVolumeOut.Device.Intf.Data)
+
+			out := result.NetVolumeOut.Device.Intf.Data
+			for n := range out {
+				fmt.Println(out[n].Time)
+				fmt.Println(out[n].Value)
+			}
 			return
 		}
 	}
