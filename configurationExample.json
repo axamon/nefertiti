@@ -1,6 +1,6 @@
 {
-    "IPDOMUser": "00246506",
-    "IPDOMPassword": "cfxW$lMS6h",
+    "IPDOMUser": "user",
+    "IPDOMPassword": "password",
     "IPWUrlRicerca": "https://ipw.telecomitalia.it/ipwweb/metrics?interfaces[]=",
     "IPDOMSnmpReceiver": "127.0.0.1",
     "IPDOMSnmpPort": 162,
