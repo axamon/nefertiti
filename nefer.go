@@ -8,7 +8,7 @@ import (
 	"time"
 )
 
-func nefer(ctx context.Context, intf string) {
+func nefer(ctx context.Context, device, intf string) {
 
 	// Riceve il contesto padre e aggiunge un timeout.
 	// massimo per terminare la richiesta dati.
@@ -45,10 +45,10 @@ func nefer(ctx context.Context, intf string) {
 			password := configuration.IPDOMPassword
 
 			// Ricompongo la URL di IPDOM con il nome del NAS all'interno.
-			url := IPWUrlRicerca + intf
+			url := IPWUrlRicerca + device + IPWUrlRicercaMiddle + intf + IPWUrlRicercaFooter
 
 			// Avvia la richiesta web.
-			result := clientRequest(ctx, url, username, password, intf)
+			result := clientRequest(ctx, url, username, password)
 
 			// Elabora il risulatato della richiesta web.
 			//elaboroRequest(ctx, result, device)

@@ -13,8 +13,11 @@ import (
 )
 
 // IPWUrlRicerca è la parte di url dove recuperare le iformazioni
-const IPWUrlRicerca = "https://ipw.telecomitalia.it/ipwweb/metrics?interfaces[]="
-
+const (
+ IPWUrlRicerca = "https://ipw.telecomitalia.it/ipwweb/api/0.16.0/metrics/?metrics[]=net.volume.in&metrics[]=net.volume.out&devices[]="
+ IPWUrlRicercaMiddle = "&slots[]="
+ IPWUrlRicercaFooter =  "&start=172800s-ago&end=1s-ago"
+)
 // Versione attuale di Nefertiti.
 var version = "version: 1.1"
 
@@ -28,7 +31,6 @@ var configuration Configuration
 var antistorm = NewTTLMap(24 * time.Hour)
 var violazioni = NewTTLMap(24 * time.Hour)
 var nientedatippp = NewTTLMap(12 * time.Hour)
-var listalistanas [][]TNAS
 
 var username, password string
 
@@ -99,8 +101,9 @@ func main() {
 	// Dorme per 3 secondi.
 	time.Sleep(3 * time.Second)
 
-	intf := "rgamt001[%20GigabitEthernet100/0/0/26%20]"
+	device := "rgamt001"
+	intf := "GigabitEthernet100/0/0/26"
 
-	nefer(ctx, intf)
+	nefer(ctx, device, intf)
 
 }

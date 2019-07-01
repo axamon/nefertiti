@@ -9,7 +9,7 @@ import (
 )
 
 func clientRequest(
-	ctx context.Context, url, username, password, intf string) (
+	ctx context.Context, url, username, password string) (
 	result []byte) {
 
 	req, err := http.NewRequest("GET", url, nil)
@@ -51,22 +51,21 @@ func clientRequest(
 	if err != nil {
 		log.Printf(
 			"Error impossibile ricevere HTTP body per %s, %s\n",
-			intf,
 			err.Error())
 		// os.Exit(1)
 	}
 	defer res.Body.Close()
 	// fmt.Println(res)
 	// fmt.Println(string(body))
-	// err = json.Unmarshal(body, &result)
-	// if err != nil {
-	// 	log.Printf(
-	// 		"Error unmarshal impossibile per %s, %s\n",
-	// 		intf,
-	// 		err.Error())
-	// 	return result
-	// }
+	result := new(RichiestaNefer)
+	err = json.Unmarshal(body, &result)
+	if err != nil {
+		log.Printf(
+			"Error unmarshal impossibile per %s, %s\n",
+			intf,
+			err.Error())
+	}
 
-	return body
+	return result
 
 }
