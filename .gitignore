@@ -1,0 +1,15 @@
+ramses.exe
+*.json
+grafici
+pippo
+fourier/fourier
+*.bat
+OLD
+*.prof
+*.csv
+config
+bot.exe
+*.zip
+trap
+algoritmi/anomaly/anomaly
+!configurationExample.json

@@ -1,0 +1,21 @@
+{
+    "IPDOMUser": "00246506",
+    "IPDOMPassword": "cfxW$lMS6h",
+    "IPWUrlRicerca": "https://ipw.telecomitalia.it/ipwweb/metrics?interfaces[]=",
+    "IPDOMSnmpReceiver": "127.0.0.1",
+    "IPDOMSnmpPort": 162,
+    "IPDOMSnmpCommunity": "public",
+    "NasDaIgnorare": "nasDaIgnorare.json",
+    "NasInventory": "nasInventory.json",
+    "Sigma": 2.5,
+    "Soglia": 0.1,
+    "URLSessioniPPP": "https://ipw.telecomitalia.it/ipwmetrics/api/v1/rawmetrics/kpi.ppoe.slot?device=",
+    "URLTail7d": "&start=7d-ago&end=5m-ago&aggregator=sum",
+    "SmtpPort": 587,
+    "SmtpServer": "smtp.server.com",
+    "SmtpUser": "user@domain.com",
+    "SmtpPassword": "fsdfsadfsd",
+    "SmtpSender": "user@domain.com",
+    "SmtpFrom": "user@domain.com",
+    "SmtpTo": "user@domain2.com"
+}
