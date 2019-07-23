@@ -3,6 +3,26 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:8fda70c57919d8b3eda9806c43d26ad27efd6049571b838f6351d4c4b9dd5767"
+  name = "github.com/ajstarks/svgo"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "6ce6a3bcf6cde6c5007887677ebd148ec30f42a4"
+
+[[projects]]
+  branch = "master"
+  digest = "1:20adadb1b494356a2151e006e8e660db06e539327045fe712d092e639e4cd9dd"
+  name = "github.com/axamon/ramses"
+  packages = [
+    ".",
+    "algoritmi",
+    "testTrap/cmd",
+  ]
+  pruneopts = "UT"
+  revision = "5456f87601d916948a1393cd34f7dc329bf17bb4"
+
+[[projects]]
+  branch = "master"
   digest = "1:8cefca256f294fed7323c1fab1fe1acd27aa1af1d8c29550b7589aa0bcacf8cd"
   name = "github.com/axamon/stringset"
   packages = ["."]
@@ -18,12 +38,31 @@
   revision = "f69e9f02317ee9608f7b224ce1fc63a8602d0785"
 
 [[projects]]
+  digest = "1:b6e21e98fcbc23345ea2e3b70766edfc7fb53c0c99966fed18e889de0fcb67f2"
+  name = "github.com/fogleman/gg"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "0403632d5b905943a1c2a5b2763aaecd568467ec"
+  version = "v1.3.0"
+
+[[projects]]
   digest = "1:abeb38ade3f32a92943e5be54f55ed6d6e3b6602761d74b4aab4c9dd45c18abd"
   name = "github.com/fsnotify/fsnotify"
   packages = ["."]
   pruneopts = "UT"
   revision = "c2828203cd70a50dcccfb2761f8b1f8ceef9a8e9"
   version = "v1.4.7"
+
+[[projects]]
+  branch = "master"
+  digest = "1:62c57507df491b657e9ae2645f30958d9964c8eeb380600469eedc951ebb3a0e"
+  name = "github.com/golang/freetype"
+  packages = [
+    "raster",
+    "truetype",
+  ]
+  pruneopts = "UT"
+  revision = "e2365dfdc4a05e4b8299a783240d4a7d5a65d4e4"
 
 [[projects]]
   digest = "1:b60efdeb75d3c0ceed88783ac2495256aba3491a537d0f31401202579fd62a94"
@@ -124,6 +163,14 @@
   version = "v1.0"
 
 [[projects]]
+  digest = "1:7a195da2ae3f4b0890c32abda136ec6a8f1f7f3ed2d216d8f8ec93bf8bd9112c"
+  name = "github.com/jung-kurt/gofpdf"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "f58a9cb00082f4f0ee8b2e5c64a6455de46bd659"
+  version = "v2.8.2"
+
+[[projects]]
   branch = "master"
   digest = "1:6fd2b97e0c34869f1bb7bc8fd5432b2d8545b6a068d38cf79ec0f9a52d936830"
   name = "github.com/lytics/anomalyzer"
@@ -170,6 +217,14 @@
   packages = ["."]
   pruneopts = "UT"
   revision = "5e7302b12ccef91dce9fde2f5bda6d5c7ea5d2eb"
+
+[[projects]]
+  branch = "master"
+  digest = "1:424c9582c139150ca472c0152a39190f1fc40f28686fa26f227bf9be14b872f1"
+  name = "github.com/ryskiwt/go-kalman"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "4f4ccfb3b9089bcb76f1b82e2f63f211fb22e25e"
 
 [[projects]]
   digest = "1:98e86b9bb8fbb9053ba2b213c69cfc4753335e53d842178cebea6526a60571f3"
@@ -240,6 +295,32 @@
 
 [[projects]]
   branch = "master"
+  digest = "1:d87af402fc3f371d6b008f58903e98bee8873db45263dc54762f00735c582495"
+  name = "golang.org/x/exp"
+  packages = ["rand"]
+  pruneopts = "UT"
+  revision = "fd42eb6b336fd763bcd0fb5be27323f5587d63d2"
+
+[[projects]]
+  branch = "master"
+  digest = "1:c70d11d47044f97775ad0533ad3a3b5665924acc4e3c95c87d3f1d33a954ca00"
+  name = "golang.org/x/image"
+  packages = [
+    "ccitt",
+    "draw",
+    "font",
+    "font/basicfont",
+    "font/plan9font",
+    "math/f64",
+    "math/fixed",
+    "tiff",
+    "tiff/lzw",
+  ]
+  pruneopts = "UT"
+  revision = "d6a02ce849c95fa57d9927fab7b6d9071876dfe0"
+
+[[projects]]
+  branch = "master"
   digest = "1:cf353a5a9ffb2d6f850e9c773e25388a425a70c270546480427ed069e87b136a"
   name = "golang.org/x/sys"
   packages = ["unix"]
@@ -284,6 +365,27 @@
   revision = "f0982070f509ee139841ca385c44dc22a77c8da8"
 
 [[projects]]
+  branch = "master"
+  digest = "1:cb57d653efe00be3bdbeee946be51755a0dd6b73cbdacf0467733908b6e3c386"
+  name = "gonum.org/v1/plot"
+  packages = [
+    ".",
+    "palette",
+    "plotter",
+    "plotutil",
+    "tools/bezier",
+    "vg",
+    "vg/draw",
+    "vg/fonts",
+    "vg/vgeps",
+    "vg/vgimg",
+    "vg/vgpdf",
+    "vg/vgsvg",
+  ]
+  pruneopts = "UT"
+  revision = "9aa86143727f898329b04f9a16882237caa96ddc"
+
+[[projects]]
   branch = "v3"
   digest = "1:7388652e2215a3f45d341d58766ed58317971030eb1cbd75f005f96ace8e9196"
   name = "gopkg.in/alexcesaro/quotedprintable.v3"
@@ -311,16 +413,25 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/axamon/ramses",
+    "github.com/axamon/ramses/algoritmi",
+    "github.com/axamon/ramses/testTrap/cmd",
     "github.com/axamon/stringset",
+    "github.com/gonum/matrix/mat64",
     "github.com/gonum/stat",
     "github.com/lytics/anomalyzer",
     "github.com/mitchellh/go-homedir",
     "github.com/remeh/sizedwaitgroup",
+    "github.com/ryskiwt/go-kalman",
     "github.com/soniah/gosnmp",
     "github.com/spf13/cobra",
     "github.com/spf13/viper",
     "github.com/tkanos/gonfig",
     "gonum.org/v1/gonum/stat",
+    "gonum.org/v1/plot",
+    "gonum.org/v1/plot/plotter",
+    "gonum.org/v1/plot/plotutil",
+    "gonum.org/v1/plot/vg",
     "gopkg.in/gomail.v2",
   ]
   solver-name = "gps-cdcl"

@@ -16,7 +16,9 @@ import (
 const (
  IPWUrlRicerca = "https://ipw.telecomitalia.it/ipwweb/api/0.16.0/metrics/?metrics[]=net.volume.in&metrics[]=net.volume.out&devices[]="
  IPWUrlRicercaMiddle = "&slots[]="
- IPWUrlRicercaFooter =  "&start=172800s-ago&end=1s-ago"
+ // IPWUrlRicercaFooter =  "&start=172800s-ago&end=1s-ago"
+ IPWUrlRicercaFooter =  "&start=604800s-ago&end=1s-ago"
+ 
 )
 // Versione attuale di Nefertiti.
 var version = "version: 1.1"

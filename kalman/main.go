@@ -34,20 +34,30 @@ func main() {
 		panic(err)
 	}
 
-	n := 10000
+	n := 1000
 	s := mat64.NewDense(1, n, nil)
 	x, dx := 0.0, 0.01
 	xary := make([]float64, 0, n)
 	yaryOrig := make([]float64, 0, n)
 
 	for i := 0; i < n; i++ {
-		y := math.Sin(x) + 0.1*(rand.NormFloat64()-0.5)
+		y := math.Sin(x) + 0.5*(rand.NormFloat64()-0.8)
 		s.Set(0, i, y)
 		x += dx
 
 		xary = append(xary, x)
 		yaryOrig = append(yaryOrig, y)
 	}
+
+	yaryOrig[0] = 0
+ 	yaryOrig[1] = 3
+	yaryOrig[10] = 0
+	 yaryOrig[11] = 2
+	 yaryOrig[12] = 2.1
+	 yaryOrig[13] = 2.4
+	 yaryOrig[14] = 2.7
+	 yaryOrig[15] = 3
+
 
 	filtered := filter.Filter(s)
 	yaryFilt := mat64.Row(nil, 0, filtered)
